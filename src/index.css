@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* This is your global CSS Stylesheet */
+/* Change on your own risk */
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    font-family: "DM Sans", sans-serif;
+  }
+
+  /* This is the css for transparent mobile menu */
+  .main-nav-menu-mobile {
+    background: rgba(107, 106, 106, 0.5);
+    backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(100px);
+  }
+
+  /* Navbar --> Navbar.jsx */
+  .header-menu > ul > li {
+    border-bottom: 1px solid transparent;
+  }
+
+  .header-menu > ul > li:hover {
+    color: white;
+    border-bottom: 1px solid white;
+    width: fit-content;
+  }
+
+  .pricing-container-dark {
+    position: relative;
+    isolation: isolate;
+    background: linear-gradient(
+      166.41deg,
+      #3e3e3e 0.74%,
+      rgba(62, 62, 62, 0) 90.27%
+    );
+
+    border-radius: 20px;
+  }
+
+  .pricing-container-dark::before {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    margin: auto;
+    left: 1px;
+    right: 1px;
+    top: 2px;
+    bottom: 0;
+    border-radius: 20px;
+    background: linear-gradient(180.25deg, #0c0c0c 10.55%, #2c2b2b 64.45%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    z-index: -1;
+  }
+}
